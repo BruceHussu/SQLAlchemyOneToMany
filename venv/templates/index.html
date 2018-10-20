@@ -1,0 +1,17 @@
+{% from "macros.html" import render_field_with_errors %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>New Post</title>
+  </head>
+  <body>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      {{ render_field_with_errors(form.name) }}<br />
+      {{ render_field_with_errors(form.email) }}<br />
+      {{ render_field_with_errors(form.body) }}<br />
+      <input type="submit" value="Save">
+    </form>
+  </body>
+</html>
